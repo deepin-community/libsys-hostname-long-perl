@@ -1,0 +1,18 @@
+Description: Don't use "use lib 'lib'" to allow as-installed testing
+Author: Axel Beckert <abe@debian.org>
+Forwarded: not-needed
+Reviewed-by: gregor herrmann <gregoa@debian.org>
+Last-Update: 2020-12-30
+
+--- a/t/local.t
++++ b/t/local.t
+@@ -2,9 +2,6 @@
+ use strict;
+ use Test;
+ 
+-use lib '../lib';
+-use lib 'lib';
+-
+ BEGIN { plan tests => 1 }
+ 
+ use Sys::Hostname::Long;

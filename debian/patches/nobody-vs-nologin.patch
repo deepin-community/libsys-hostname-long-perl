@@ -1,0 +1,17 @@
+Description: Use "su -s /bin/sh nobody" to cope with the change of nobody's shell in base-passwd 3.5.30.
+Bug-Debian: https://bugs.debian.org/734710
+Author: Colin Watson <cjwatson@debian.org>
+Reviewed-by: Axel Beckert <abe@debian.org>
+Last-Update: 2020-12-30
+
+--- a/lib/Sys/Hostname/Long.pm
++++ b/lib/Sys/Hostname/Long.pm
+@@ -77,7 +77,7 @@
+ 			my $tmp;
+ 			if ( $^O ne 'darwin' ) {
+ 				if ($< == 0) {
+-					$tmp = `su nobody -c "hostname --fqdn"`;
++					$tmp = `su -s /bin/sh nobody -c "hostname --fqdn"`;
+ 				} else {
+ 					$tmp = `hostname --fqdn`;
+ 				}

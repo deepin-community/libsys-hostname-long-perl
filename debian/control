@@ -1,0 +1,25 @@
+Source: libsys-hostname-long-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: perl
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libsys-hostname-long-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libsys-hostname-long-perl.git
+Homepage: https://metacpan.org/release/Sys-Hostname-Long
+Rules-Requires-Root: no
+
+Package: libsys-hostname-long-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Description: module tp determine the long (fully-qualified) hostname
+ Sys::Hostname::Long determines the host full name on multiple
+ operating systems (MacOS, Windows, Unix-like systems; more later.)
+ .
+ The Sys::Hostname class is the best and standard way to get the basic
+ hostname, but that may not be fully qualified.  This module tries to
+ determine the host's fully qualified name.

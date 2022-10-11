@@ -1,0 +1,143 @@
+libsys-hostname-long-perl (1.5-2) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * Change bugtracker URL(s) to HTTPS.
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * Remove Fabrizio Regalli from Uploaders. Thanks for your work!
+
+  [ Alex Muntada ]
+  * Remove inactive pkg-perl members from Uploaders.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * debian/watch: use uscan version 4.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Remove obsolete field Name from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
+
+  [ gregor herrmann ]
+  * Remove "Contact: unknown" from debian/upstream/metadata.
+  * Refresh patches and their headers.
+  * Run the example "testall.pl" script after dh_auto_test to get more
+    debugging information in case the tests fail. Cf. #978675
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.5.1.
+  * Set Rules-Requires-Root: no.
+  * Bump debhelper-compat to 13.
+  * Update short description.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 30 Dec 2020 01:51:23 +0100
+
+libsys-hostname-long-perl (1.5-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ Axel Beckert ]
+  * Add debian/upstream/metadata
+  * Import upstream version 1.5
+    + Refresh sole patch.
+  * Add full module name to long description. Fixes pkg-perl specific
+    lintian warning no-module-name-in-description.
+  * Declare compliance with Debian Policy 3.9.6 (no other changes needed).
+  * Add patch to remove "use lib" usage from test suite to allow
+    as-installed testing and hence make the package autopkgtestable.
+
+ -- Axel Beckert <abe@debian.org>  Sun, 10 May 2015 18:32:02 +0200
+
+libsys-hostname-long-perl (1.4-3) unstable; urgency=medium
+
+  * Team upload
+
+  [ gregor herrmann ]
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ Fabrizio Regalli ]
+  * Bump to 3.9.2 Standard-Version.
+  * Switch to DEP5 license format.
+  * Add myself to Uploaders.
+  * Switch d/compat to 8.
+  * Build-Depends: switch to debhelper (>= 8).
+  * Bump to 3.0 quilt format.
+  * Email change: gregor herrmann -> gregoa@debian.org
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Axel Beckert ]
+  * debian/copyright: migrate pre-1.0 format to 1.0 using "cme fix dpkg-
+    copyright"
+  * Use "su -s /bin/sh nobody" to cope with the change of nobody's shell in
+    base-passwd 3.5.30. (Closes: #734710) Patch by Colin Watson.
+  * Apply wrap-and-sort
+  * Bump debhelper compatibility to 9
+    + Gets rid of the dh_pysupport deprecation warning
+    + Update versioned debhelper build-dependency accordingly
+  * Bump Standard-Version to 3.9.5 (no changes)
+
+ -- Axel Beckert <abe@debian.org>  Fri, 10 Jan 2014 01:34:09 +0100
+
+libsys-hostname-long-perl (1.4-2) unstable; urgency=low
+
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza). Removed: XS-
+    Vcs-Svn fields.
+  * debian/watch: use dist-based URL.
+  * debian/rules:
+    - delete /usr/lib/perl5 only if it exists (closes: #467967)
+    - update based on dh-make-perl's templates
+    - don't install almost empty README any more
+    - don't install testall.pl into /usr/share/perl5/ but as an example
+    - activate test suite
+  * Set Standards-Version to 3.7.3 (no changes).
+  * Set debhelper compatibility level to 5.
+  * Add /me to Uploaders.
+  * debian/copyright: add specific download URL and actual copyright notice.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Wed, 12 Mar 2008 20:25:12 +0100
+
+libsys-hostname-long-perl (1.4-1) unstable; urgency=low
+
+  * New upstream release, taking package for Debian Perl Group
+    (closes: #357088)
+  * debian/watch - added
+  * debian/control -
+   - Maintainer: changed to Debian Perl Group
+   - Uploaders: added me
+   - Standards-Version: increased to 3.6.2
+
+ -- Krzysztof Krzyzaniak (eloy) <eloy@debian.org>  Wed, 15 Mar 2006 18:37:22 +0100
+
+libsys-hostname-long-perl (1.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chip Salzenberg <chip@debian.org>  Tue,  8 Mar 2005 12:20:03 -0500
+
+libsys-hostname-long-perl (1.0-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Chip Salzenberg <chip@debian.org>  Thu, 11 Mar 2004 14:27:23 -0500
